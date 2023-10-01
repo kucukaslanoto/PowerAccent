@@ -16,6 +16,7 @@ public enum Language
     HU,
     IS,
     IT,
+    KU,
     JP,
     MI,
     NL,
@@ -48,6 +49,7 @@ internal static class Languages
             case Language.HU: return GetDefaultLetterKeyHU(letter); // Hungarian
             case Language.IS: return GetDefaultLetterKeyIS(letter); // Iceland
             case Language.IT: return GetDefaultLetterKeyIT(letter); // Italian
+            case Language.KU: return GetDefaultLetterKeyKU(letter); // Kurdish (Kurmanji)
             case Language.JP: return GetDefaultLetterKeyJP(letter); // Japanese
             case Language.MI: return GetDefaultLetterKeyMI(letter); // Maori
             case Language.NL: return GetDefaultLetterKeyNL(letter); // Netherlands
@@ -604,6 +606,34 @@ internal static class Languages
                 return new char[] { 'ù', 'ú' };
         }
 
+        return Array.Empty<char>();
+    }
+    
+    // Kurdish
+    private static string[] GetDefaultLetterKeyKU(LetterKey letter)
+    {
+        switch (letter)
+        {
+            case LetterKey.C:
+                return new char[]  { "ç" };
+            case LetterKey.(E):
+                            return new char[]{ "ê"; "€" };
+            case LetterKey.(I):
+                            return new char[]{ "î" };
+            case LetterKey.(O):
+                            return new char[]{ "ö"; "ô" };
+            case LetterKey.(L):
+                            return new char[]{ "ł" };
+            case LetterKey.(N):
+                            return new char[]{ "ň" };
+            case LetterKey.(R):
+                            return new char[]{ "ř" };
+            case LetterKey.(S):
+                            return new char[]{ "ş" };
+            case LetterKey.(U):
+                            return new char[]{ "û"; "ü" };
+        }
+        
         return Array.Empty<char>();
     }
 
